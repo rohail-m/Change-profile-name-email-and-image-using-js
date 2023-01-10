@@ -1,86 +1,89 @@
-
+.form {
+  border: solid grey 10px;
+}
 
 body {
-   font-family: system-ui, sans-serif;
-    justify-content: center;
-    padding-top: 9.5%;
+  font-family: system-ui, sans-serif;
+  justify-content: center;
+  padding-top: 9.5%;
 }
 
-.container
-{
-  border: 3px solid red;
+.container {
   display: flex;
   justify-content: center;
-  
+  flex-wrap: wrap;
 }
 
-.entry_panel
-{
-  border: 3px solid blue;
+.entry_panel {
   width: fit-content;
+  outline: 4px ridge rgba(170, 50, 220, 0.6);
+  border-radius: 1rem;
 }
-.show_panel
-{
-  border: 3px solid yellow;
+.show_panel {
   width: 23%;
   margin-left: 5%;
+  outline: 16px ridge rgba(170, 50, 220);
+  border-radius: 1rem;
 }
-.img
-{
+.img {
   width: 50px;
   height: 50px;
   border-radius: 30px;
 }
-.profile_name
-{
-  border: 3px solid orange;
+.profile_name {
   margin-right: 10px;
   height: fit-content;
- justify-content: center; 
-   text-align: center;
-   align-items: center;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
 }
-.horizontal
-{
-  border: 3px solid pink;
+.horizontal {
   display: flex;
- width: 99%;
- align-items: center;
+  width: 99%;
+  align-items: center;
 }
-.dot
-{
-  
+.dot {
   margin-left: 30%;
   width: 25px;
   height: 25px;
   border-radius: 50%;
   text-align: center;
 }
-.dot:hover, .big_image:hover,  img:hover, .submit:hover
-{
+.dot:hover,
+.big_image:hover,
+img:hover,
+.submit:hover {
   cursor: pointer;
-  background-color:purple;
+  background-color: rgb(136, 97, 136);
   color: white;
 }
-.submit
-{
+.submit {
   border-radius: 13px;
 }
-.big_image
-{
-  border: 3px solid black;
-  width: 98%;
+.big_image {
+  padding-top: 5%;
+  width: 345px;
+  height: 340px;
   background-color: black;
   align-items: center;
   display: flex;
   justify-content: center;
   text-align: center;
-  
 }
 
-.abc
-{
+.abc {
   font-size: 10px;
   margin-right: 45%;
   color: grey;
+}
+
+.button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 25%;
+}
+
+.form {
+  outline: 5px grey;
 }

@@ -14,27 +14,67 @@
   <body>
    
     <div class="container">
+     <form >
       <div class="entry_panel">
         <p><strong>Enter the Name</p>
-          <input type="text" id="name" class = "name" placeholder="Enter the Name"/>
+          <input type="text" id="name" class = "name" placeholder="Enter the Name" required/>
           <p>Enter the Image link</p>
           <input type="link" id="link" class = "link" placeholder="Enter the link"/>
           <p>Enter the Email</p>
           <input type="email" class="email" id="email" placeholder="Enter your email"/>
           <br>
-          <button type="button" id="submit" class="submit">Submit</button></strong>
+        <div class="button">  <button type="button" id="submit" class="submit" onclick="myFunction(this)">Submit</button></div></strong>
       </div>
+    </form>
+    
       <div class="show_panel">
         <div class="horizontal">
-        <img id="img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3KtgPAvS2MH-Iv1Pamt4sWeYNtDBi7qF5QNT7t84&s" class="img">
-        <div id="profile_name" class="profile_name">Muhammad_Rohail
-          <div class="abc">abc@gmail.com</div>
+          <img id="img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3KtgPAvS2MH-Iv1Pamt4sWeYNtDBi7qF5QNT7t84&s" class="img">
+
+        <div class="profilename_email">
+        <div id="profile_name" class="profile_name">Muhammad_Rohail</div>
+          <div id="emailed" class="abc">abc@gmail.com</div>
         </div>
         
         <p class="dot"><strong>...</strong></p> 
         </div>
-       <div class="big_image"> <img src="https://newprofilepic2.photo-cdn.net//assets/images/article/profile.jpg" alt="img.jpg" class="big_image" id="big_image"/></div>
+        <div class="big_image"> <img src="https://newprofilepic2.photo-cdn.net//assets/images/article/profile.jpg" alt="img.jpg" class="big_image" id="big_image"/></div>
+        <img id="imgg"/>
     </div>
   </div>
+
+  <script>
+    function myFunction(btn)
+    {
+      let bt = document.createElement('pName');
+      bt = document.getElementById('name').value;
+      if(bt === "")
+      {
+        alert('please enter name');        
+      }
+     else{
+      document.getElementById('profile_name').innerHTML=bt ;
+     }
+     
+      let abc = document.createElement('em');
+      abc = document.getElementById('email').value;
+      document.getElementById('emailed').innerHTML=abc;
+
+      let Image_Id = document.getElementById('big_image');
+     
+            if (Image_Id.src.match("https://newprofilepic2.photo-cdn.net//assets/images/article/profile.jpg")) 
+            {
+                Image_Id.src = "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cHJvZmlsZXxlbnwwfHwwfHw%3D&w=1000&q=80";
+            }
+            else {
+                Image_Id.src = "https://newprofilepic2.photo-cdn.net//assets/images/article/profile.jpg";
+            }
+
+     /* let image = document.createElement('img');
+      image = document.getElementById('link').src;
+     document.getElementById("big_image").src =image;*/
+
+    } 
+  </script>
   </body>
 </html>
